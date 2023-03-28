@@ -10,7 +10,6 @@ pipeline {
       stage('Test') {
           steps {
               echo 'this is testing stage..'
-
           }
       }
       stage('Deploy') {
@@ -19,5 +18,5 @@ pipeline {
 
           }
       }
-
+  }
 }
