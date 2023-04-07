@@ -2,7 +2,7 @@ pipeline {
 
   agent any
   parameters {
-      choice(name: 'CHOICES', choices: ['1.1.1', '2.2.2', '3.3.3'], descreption: 'choose your version')
+      choice(name: 'CHOICES', choices: ['1.1.1', '2.2.2', '3.3.3'], description: 'choose your version')
   }
   
   stages {
