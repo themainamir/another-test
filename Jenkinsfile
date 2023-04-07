@@ -1,6 +1,10 @@
 pipeline {
 
   agent any
+  parametes {
+      choice(name: 'CHOICES', choices: ['1.1.1', '2.2.2', '3.3.3'], descreption: 'choose your version')
+  }
+  
   stages {
       stage('‌Build') {
           steps {
