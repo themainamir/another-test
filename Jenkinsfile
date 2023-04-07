@@ -13,8 +13,13 @@ pipeline {
           }
       }
       stage('Test') {
+        when {
+          expression {
+              params.CHOICES == '1.1.1'
+          }
+        }
           steps {
-              echo 'this is testing stage..'
+              echo 'this is testing 1.1.1'
           }
       }
       stage('Deploy') {
