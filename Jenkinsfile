@@ -1,7 +1,7 @@
 pipeline {
 
   agent any
-  parametes {
+  parameters {
       choice(name: 'CHOICES', choices: ['1.1.1', '2.2.2', '3.3.3'], descreption: 'choose your version')
   }
   
@@ -9,6 +9,7 @@ pipeline {
       stage('‌Build') {
           steps {
               echo 'this is building stage..'
+              echo "Your favorite fruit is ${params.CHOICES}"
           }
       }
       stage('Test') {
